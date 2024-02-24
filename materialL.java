@@ -46,7 +46,6 @@ public class materialL {
         this.tematica = tematica;
     }
 
-    // prueva de comentario
     public String cadena() {
         return "ID: " + id + ", Título: " + titulo + ", Autor: " + autor + ", Temática: " + tematica;
     }
