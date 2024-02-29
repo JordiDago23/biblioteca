@@ -96,19 +96,16 @@ int opcion3 = 0;
 					System.out.println();
 					nuevoId = scan.nextInt();
 					scan.nextLine();
-					System.out.println();					
 					System.out.print("Cual es el nuevo Titulo del libro a implementar : ");
 					System.out.println();
 					nuevoTitulo = scan.next();
-					System.out.println();					
 					System.out.print("Cual es el nuevo Autor del libro a implementar : ");
 					System.out.println();
 					nuevoAutor = scan.next();
-					System.out.println();					
 					System.out.print("Cual es el nuevo Temática del libro a implementar : ");
 					System.out.println();
 					nuevoTematica = scan.next();
-					System.out.println();				
+				
 					System.out.print("Cual es el nuevo estado de Reservado del libro a implementar (false: no reservado / true: reservado) ?");
 					nuevoReservado = scan.nextBoolean();
 					System.out.println();
@@ -187,21 +184,21 @@ int opcion3 = 0;
 					
 					System.out.println("Introduzca los datos de esta Nueva Revista : ");
 					System.out.print("Que Id tendra esta Revista : ");
-					System.out.println();
 					nuevoId = scan.nextInt();
+					System.out.println();
 					scan.nextLine();
 					System.out.print("Que Titulo tendra la Revista : ");
-					System.out.println();
 					nuevoTitulo = scan.nextLine();
+					System.out.println();					
 					System.out.print("A Que Autor pertenecera la Revista : ");
-					System.out.println();
 					nuevoAutor = scan.nextLine();
+					System.out.println();
 					System.out.print("Que Temática tendra esta Revista  : ");
-					System.out.println();
 					nuevoTematica = scan.nextLine();
-					System.out.print("Que Precio tendra esta Revista : ");
 					System.out.println();
+					System.out.print("Que Precio tendra esta Revista : ");
 					nuevoPrecio = scan.nextDouble();
+					System.out.println();
 					
 					Revista revista = new Revista(nuevoId, nuevoTitulo, nuevoAutor, nuevoTematica ,nuevoPrecio);
 					
@@ -220,9 +217,9 @@ int opcion3 = 0;
 					String titulo; int nuevoId; String nuevoTitulo; String nuevoAutor; String nuevoTematica; double nuevoPrecio; 
 					
 					
-					System.out.print("Cual es el titulo de la Revista que quiere modificar : ");
+					System.out.print("Cual es el titulo de la Revista que quiere modificar : ");					
+					titulo = scan.next();
 					System.out.println();
-					titulo = scan.next();				
 					System.out.print("Cual es el nuevo Id de la Revista a implementar : ");
 					nuevoId = scan.nextInt();
 					scan.nextLine();
@@ -354,7 +351,7 @@ int opcion3 = 0;
 				}else if(opcion3 == 4){
 					
 					String tituloBuscar;
-					System.out.print("Introduce el Titulo del Articulo que quiere buscar :");
+					System.out.print("Introduce el Titulo del Articulo que quiere buscar : ");
 					tituloBuscar = scan.nextLine();
 					
 					Articulo.buscarArticuloPorTitulo( tituloBuscar);
@@ -363,7 +360,7 @@ int opcion3 = 0;
 					
 					String autorBuscar;
 					
-					System.out.print("Que Autor quiere introducir para buscar un Articulo :");
+					System.out.print("Que Autor quiere introducir para buscar un Articulo : ");
 					autorBuscar = scan.nextLine();
 					
 					Articulo.buscarArticuloPorAutor( autorBuscar);
@@ -371,7 +368,7 @@ int opcion3 = 0;
 				}else if(opcion3 == 6){
 					
 					String tematicaBuscar;
-					System.out.print("Que temática desea introducir para encontrar un Articulo :");
+					System.out.print("Que temática desea introducir para encontrar un Articulo : ");
 					tematicaBuscar = scan.nextLine();
 					
 					Articulo.buscarArticuloPorTematica( tematicaBuscar);

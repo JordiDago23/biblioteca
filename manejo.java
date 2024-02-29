@@ -37,6 +37,7 @@ int opcion3 = 0 ;
 					System.out.println("Opcion 4: Volver Atras");
 					
 					opcion1 = scan.nextInt();
+					scan.nextLine();
 					
 				if(opcion1 == 1){
 					
@@ -46,12 +47,16 @@ int opcion3 = 0 ;
 					System.out.print("Que Id tendra este Libro : ");
 					nuevoId = scan.nextInt();
 					scan.nextLine();
+					System.out.println();
 					System.out.print("Que Titulo tendra el Libro : ");
 					nuevoTitulo = scan.nextLine();
+					System.out.println();
 					System.out.print("A Que Autor pertenecera el Libro : ");
 					nuevoAutor = scan.nextLine();
+					System.out.println();
 					System.out.print("Que Temática tendra este Libro : ");
 					nuevoTematica = scan.nextLine();
+					System.out.println();
 					
 					Libro libro = new Libro(nuevoId, nuevoTitulo, nuevoAutor, nuevoTematica);
 					
@@ -59,6 +64,7 @@ int opcion3 = 0 ;
 					Libro.añadirLibro(libro);
 					
 				}else if(opcion1 == 2){
+					
 					String titulo;
 					
 					System.out.print("Introduzca el Titulo del Libro que desea Eliminar : ");
@@ -125,21 +131,21 @@ int opcion3 = 0 ;
 					
 					System.out.println("Introduzca los datos de esta Nueva Revista : ");
 					System.out.print("Que Id tendra esta Revista : ");
-					System.out.println();
 					nuevoId = scan.nextInt();
+					System.out.println();
 					scan.nextLine();
 					System.out.print("Que Titulo tendra la Revista : ");
-					System.out.println();
 					nuevoTitulo = scan.nextLine();
+					System.out.println();					
 					System.out.print("A Que Autor pertenecera la Revista : ");
-					System.out.println();
 					nuevoAutor = scan.nextLine();
+					System.out.println();
 					System.out.print("Que Temática tendra esta Revista  : ");
-					System.out.println();
 					nuevoTematica = scan.nextLine();
-					System.out.print("Que Precio tendra esta Revista : ");
 					System.out.println();
+					System.out.print("Que Precio tendra esta Revista : ");
 					nuevoPrecio = scan.nextDouble();
+					System.out.println();
 					
 					Revista revista = new Revista(nuevoId, nuevoTitulo, nuevoAutor, nuevoTematica ,nuevoPrecio);
 					
@@ -158,9 +164,9 @@ int opcion3 = 0 ;
 					String titulo; int nuevoId; String nuevoTitulo; String nuevoAutor; String nuevoTematica; double nuevoPrecio; 
 					
 					
-					System.out.print("Cual es el titulo de la Revista que quiere modificar : ");
+					System.out.print("Cual es el titulo de la Revista que quiere modificar : ");					
+					titulo = scan.next();
 					System.out.println();
-					titulo = scan.next();				
 					System.out.print("Cual es el nuevo Id de la Revista a implementar : ");
 					nuevoId = scan.nextInt();
 					scan.nextLine();
@@ -208,18 +214,18 @@ int opcion3 = 0 ;
 					
 					System.out.println("Introduzca los datos de este Nuevo Articulo : ");
 					System.out.print("Que Id tendra este Articulo : ");
-					System.out.println();
 					nuevoId = scan.nextInt();
 					scan.nextLine();
+					System.out.println();
 					System.out.print("Que Titulo tendra el Articulo : ");
-					System.out.println();
 					nuevoTitulo = scan.nextLine();
+					System.out.println();					
 					System.out.print("A Que Autor pertenecera el Articulo : ");
-					System.out.println();
 					nuevoAutor = scan.nextLine();
+					System.out.println();					
 					System.out.print("Que Temática tendra este Articulo : ");
-					System.out.println();
 					nuevoTematica = scan.nextLine();
+					System.out.println();					
 					
 					Articulo articulo = new Articulo(nuevoId, nuevoTitulo, nuevoAutor, nuevoTematica );
 					Articulo.añadirArticulo(articulo);
@@ -236,8 +242,8 @@ int opcion3 = 0 ;
 					String titulo; int nuevoId; String nuevoTitulo; String nuevoAutor; String nuevoTematica; boolean nuevoDisponible; 					
 					
 					System.out.print("Cual es el titulo del Articulo que quiere modificar : ");
-					System.out.println();
-					titulo = scan.next();				
+					titulo = scan.next();
+					System.out.println();									
 					System.out.print("Cual es el nuevo Id del Articulo a implementar : ");
 					nuevoId = scan.nextInt();
 					scan.nextLine();

@@ -1,7 +1,9 @@
 package biblioteca;
 
 public class materialL {
-//id, titulo, autor y temática 
+	
+	//id, titulo, autor y temática
+	
 	protected int id;
     protected String titulo;
     protected String autor;
@@ -13,7 +15,9 @@ public class materialL {
         this.autor = autor;
         this.tematica = tematica;
     }
+    
     // getters y setters
+    
     public int getId() {
         return id;
     }
@@ -45,7 +49,9 @@ public class materialL {
     public void setTematica(String tematica) {
         this.tematica = tematica;
     }
-//Metodos
+    
+    //Metodos
+    
     public String cadena() {
         return "ID: " + id + ", Título: " + titulo + ", Autor: " + autor + ", Temática: " + tematica;
     }

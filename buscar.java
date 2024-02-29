@@ -131,7 +131,7 @@ int opcion3 = 0 ;
 					
 				if(opcion3 == 1){
 					String tituloBuscar;
-					System.out.print("Introduce el Titulo del Articulo que quiere buscar :");
+					System.out.print("Introduce el Titulo del Articulo que quiere buscar : ");
 					tituloBuscar = scan.nextLine();
 						
 					Articulo.buscarArticuloPorTitulo( tituloBuscar);
@@ -139,14 +139,14 @@ int opcion3 = 0 ;
 				}else if(opcion3 == 2){
 					String autorBuscar;
 					
-					System.out.print("Que Autor quiere introducir para buscar un Articulo :");
+					System.out.print("Que Autor quiere introducir para buscar un Articulo : ");
 					autorBuscar = scan.nextLine();
 					
 					Articulo.buscarArticuloPorAutor( autorBuscar);
 						
 				}else if(opcion3 == 3){
 					String tematicaBuscar;
-					System.out.print("Que temática desea introducir para encontrar un Articulo :");
+					System.out.print("Que temática desea introducir para encontrar un Articulo : ");
 					tematicaBuscar = scan.nextLine();
 					
 					Articulo.buscarArticuloPorTematica( tematicaBuscar);
