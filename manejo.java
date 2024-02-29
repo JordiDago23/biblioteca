@@ -23,6 +23,7 @@ int opcion3 = 0 ;
 		System.out.println("Opcion 4: Volver al Menu");
 		
 		opcion = scan.nextInt();
+		scan.nextLine();
 		
 		if(opcion == 1){
 			
@@ -41,28 +42,26 @@ int opcion3 = 0 ;
 					
 					int nuevoId = 0;  String nuevoTitulo;  String nuevoAutor;  String nuevoTematica;
 					
-					System.out.println("Introduzca los datos de este Nuevo Libro :");
-					System.out.print("Que Id tendra este Libro ?");
-					System.out.println();
+					System.out.println("Introduzca los datos de este Nuevo Libro : ");
+					System.out.print("Que Id tendra este Libro : ");
 					nuevoId = scan.nextInt();
-					System.out.print("Que Titulo tendra el Libro ?");
-					System.out.println();
+					scan.nextLine();
+					System.out.print("Que Titulo tendra el Libro : ");
 					nuevoTitulo = scan.nextLine();
-					System.out.print("A Que Autor pertenecera el Libro ?");
-					System.out.println();
+					System.out.print("A Que Autor pertenecera el Libro : ");
 					nuevoAutor = scan.nextLine();
-					System.out.print("Que Temática tendra este Libro ?");
-					System.out.println();
+					System.out.print("Que Temática tendra este Libro : ");
 					nuevoTematica = scan.nextLine();
 					
 					Libro libro = new Libro(nuevoId, nuevoTitulo, nuevoAutor, nuevoTematica);
+					
 					
 					Libro.añadirLibro(libro);
 					
 				}else if(opcion1 == 2){
 					String titulo;
 					
-					System.out.print("Introduzca el Titulo del Libro que desea Eliminar :");
+					System.out.print("Introduzca el Titulo del Libro que desea Eliminar : ");
 					titulo = scan.nextLine();
 					
 					Libro.eliminarLibro( titulo);
@@ -72,19 +71,24 @@ int opcion3 = 0 ;
 					String titulo; int nuevoId; String nuevoTitulo; String nuevoAutor; String nuevoTematica; boolean nuevoReservado; 
 					
 					
-					System.out.print("Cual es el titulo del libro que quiere modificar ?");
+					System.out.print("Cual es el titulo del libro que quiere modificar : ");
 					System.out.println();
 					titulo = scan.next();				
-					System.out.print("Cual es el nuevo Id del libro a implementar ?");
+					System.out.print("Cual es el nuevo Id del libro a implementar : ");
+					System.out.println();
 					nuevoId = scan.nextInt();
+					scan.nextLine();
 					System.out.println();					
-					System.out.print("Cual es el nuevo Titulo del libro a implementar ?");
+					System.out.print("Cual es el nuevo Titulo del libro a implementar : ");
+					System.out.println();
 					nuevoTitulo = scan.next();
 					System.out.println();					
-					System.out.print("Cual es el nuevo Autor del libro a implementar ?");
+					System.out.print("Cual es el nuevo Autor del libro a implementar : ");
+					System.out.println();
 					nuevoAutor = scan.next();
 					System.out.println();					
-					System.out.print("Cual es el nuevo Temática del libro a implementar ?");
+					System.out.print("Cual es el nuevo Temática del libro a implementar : ");
+					System.out.println();
 					nuevoTematica = scan.next();
 					System.out.println();				
 					System.out.print("Cual es el nuevo estado de Reservado del libro a implementar (false: no reservado / true: reservado) ?");
@@ -113,25 +117,27 @@ int opcion3 = 0 ;
 				System.out.println("Opcion 4: Volver Atras");
 					
 					opcion2 = scan.nextInt();
+					scan.nextLine();
 					
 				if(opcion2 == 1){
 						
 					int nuevoId = 0;  String nuevoTitulo;  String nuevoAutor;  String nuevoTematica; double nuevoPrecio;
 					
-					System.out.println("Introduzca los datos de esta Nueva Revista :");
-					System.out.print("Que Id tendra esta Revista ?");
+					System.out.println("Introduzca los datos de esta Nueva Revista : ");
+					System.out.print("Que Id tendra esta Revista : ");
 					System.out.println();
 					nuevoId = scan.nextInt();
-					System.out.print("Que Titulo tendra la Revista ?");
+					scan.nextLine();
+					System.out.print("Que Titulo tendra la Revista : ");
 					System.out.println();
 					nuevoTitulo = scan.nextLine();
-					System.out.print("A Que Autor pertenecera la Revista ?");
+					System.out.print("A Que Autor pertenecera la Revista : ");
 					System.out.println();
 					nuevoAutor = scan.nextLine();
-					System.out.print("Que Temática tendra esta Revista ?");
+					System.out.print("Que Temática tendra esta Revista  : ");
 					System.out.println();
 					nuevoTematica = scan.nextLine();
-					System.out.print("Que Precio tendra esta Revista ?");
+					System.out.print("Que Precio tendra esta Revista : ");
 					System.out.println();
 					nuevoPrecio = scan.nextDouble();
 					
@@ -142,7 +148,7 @@ int opcion3 = 0 ;
 				}else if(opcion2 == 2){
 					
 					String titulo;
-					System.out.print("Introduzca el Titulo de la Revista que desea Eliminar :");
+					System.out.print("Introduzca el Titulo de la Revista que desea Eliminar : ");
 					titulo = scan.nextLine();
 					
 					Revista.eliminarRevista( titulo);
@@ -152,22 +158,23 @@ int opcion3 = 0 ;
 					String titulo; int nuevoId; String nuevoTitulo; String nuevoAutor; String nuevoTematica; double nuevoPrecio; 
 					
 					
-					System.out.print("Cual es el titulo de la Revista que quiere modificar ?");
+					System.out.print("Cual es el titulo de la Revista que quiere modificar : ");
 					System.out.println();
 					titulo = scan.next();				
-					System.out.print("Cual es el nuevo Id de la Revista a implementar ?");
+					System.out.print("Cual es el nuevo Id de la Revista a implementar : ");
 					nuevoId = scan.nextInt();
+					scan.nextLine();
 					System.out.println();					
-					System.out.print("Cual es el nuevo Titulo de la Revista a implementar ?");
+					System.out.print("Cual es el nuevo Titulo de la Revista a implementar : ");
 					nuevoTitulo = scan.next();
 					System.out.println();					
-					System.out.print("Cual es el nuevo Autor de la Revista a implementar ?");
+					System.out.print("Cual es el nuevo Autor de la Revista a implementar : ");
 					nuevoAutor = scan.next();
 					System.out.println();					
-					System.out.print("Cual es el nuevo Temática de la Revista a implementar ?");
+					System.out.print("Cual es el nuevo Temática de la Revista a implementar : ");
 					nuevoTematica = scan.next();
 					System.out.println();				
-					System.out.print("Cual es el nuevo Precio de la Revista a implementar ?");
+					System.out.print("Cual es el nuevo Precio de la Revista a implementar : ");
 					nuevoPrecio = scan.nextDouble();
 					System.out.println();
 				
@@ -193,22 +200,24 @@ int opcion3 = 0 ;
 				System.out.println("Opcion 4: Volver Atras");
 					
 					opcion3 = scan.nextInt();
+					scan.nextLine();
 					
 				if(opcion3 == 1){
 					
 					int nuevoId = 0;  String nuevoTitulo;  String nuevoAutor;  String nuevoTematica;
 					
-					System.out.println("Introduzca los datos de este Nuevo Articulo :");
-					System.out.print("Que Id tendra este Articulo ?");
+					System.out.println("Introduzca los datos de este Nuevo Articulo : ");
+					System.out.print("Que Id tendra este Articulo : ");
 					System.out.println();
 					nuevoId = scan.nextInt();
-					System.out.print("Que Titulo tendra el Articulo ?");
+					scan.nextLine();
+					System.out.print("Que Titulo tendra el Articulo : ");
 					System.out.println();
 					nuevoTitulo = scan.nextLine();
-					System.out.print("A Que Autor pertenecera el Articulo ?");
+					System.out.print("A Que Autor pertenecera el Articulo : ");
 					System.out.println();
 					nuevoAutor = scan.nextLine();
-					System.out.print("Que Temática tendra este Articulo ?");
+					System.out.print("Que Temática tendra este Articulo : ");
 					System.out.println();
 					nuevoTematica = scan.nextLine();
 					
@@ -218,7 +227,7 @@ int opcion3 = 0 ;
 				}else if(opcion3 == 2){
 					
 					String titulo;
-					System.out.print("Introduzca el Titulo del Articulo que desea Eliminar :");
+					System.out.print("Introduzca el Titulo del Articulo que desea Eliminar : ");
 					titulo = scan.nextLine();
 					
 					Articulo.eliminarArticulo(titulo);
@@ -226,19 +235,20 @@ int opcion3 = 0 ;
 				}else if(opcion3 == 3){					
 					String titulo; int nuevoId; String nuevoTitulo; String nuevoAutor; String nuevoTematica; boolean nuevoDisponible; 					
 					
-					System.out.print("Cual es el titulo del Articulo que quiere modificar ?");
+					System.out.print("Cual es el titulo del Articulo que quiere modificar : ");
 					System.out.println();
 					titulo = scan.next();				
-					System.out.print("Cual es el nuevo Id del Articulo a implementar ?");
+					System.out.print("Cual es el nuevo Id del Articulo a implementar : ");
 					nuevoId = scan.nextInt();
+					scan.nextLine();
 					System.out.println();					
-					System.out.print("Cual es el nuevo Titulo del Articulo a implementar ?");
+					System.out.print("Cual es el nuevo Titulo del Articulo a implementar : ");
 					nuevoTitulo = scan.next();
 					System.out.println();					
-					System.out.print("Cual es el nuevo Autor del Articulo a implementar ?");
+					System.out.print("Cual es el nuevo Autor del Articulo a implementar : ");
 					nuevoAutor = scan.next();
 					System.out.println();					
-					System.out.print("Cual es el nuevo Temática del Articulo a implementar ?");
+					System.out.print("Cual es el nuevo Temática del Articulo a implementar : ");
 					nuevoTematica = scan.next();
 					System.out.println();				
 					System.out.print("Cual es la Disponibilidad del Articulo a implementar (false: No Disponible / true: Disponible)?");

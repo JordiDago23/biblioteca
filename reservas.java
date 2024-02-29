@@ -22,18 +22,20 @@ int opcion3 = 0 ;
 		System.out.println("Opcion 3: Finalizar Programa");
 		
 		opcion = scan.nextInt();
+		scan.nextLine();
 		
 		if(opcion == 1){
+			
 			String titulo;
-			System.out.print("Introduzca el Titulo del Libro que quiere Reservar :");
+			System.out.print("Introduzca el Titulo del Libro que quiere Reservar : ");
 			titulo = scan.nextLine();
 			
 			Libro.reservarLibro(titulo);
 				
 		}else if(opcion == 2){
-			String titulo;
 			
-			System.out.print("Introduzca el Titulo del Libro con que quiere Cancelar la Reserva :");
+			String titulo;
+			System.out.print("Introduzca el Titulo del Libro con que quiere Cancelar la Reserva : ");
 			titulo = scan.nextLine();
 			
 			Libro.eliminarReserva(titulo);

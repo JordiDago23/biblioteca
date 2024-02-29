@@ -23,6 +23,7 @@ int opcion3 = 0 ;
 		System.out.println("Opcion 4: Volver al Menu");
 		
 		opcion = scan.nextInt();
+		scan.nextLine();
 		
 		if(opcion == 1){
 			
@@ -36,24 +37,26 @@ int opcion3 = 0 ;
 					System.out.println("Opcion 4: Volver Atras");
 					
 					opcion1 = scan.nextInt();
+					scan.nextLine();
 					
-					if(opcion1 == 1){
-						String tituloBuscar;
-						
-						System.out.print("Introduce el Titulo del Libro que quiere buscar :");
-						tituloBuscar = scan.nextLine();
-						
-						Libro.buscarLibroPorTitulo(tituloBuscar);
+				if(opcion1 == 1){
+					
+					String tituloBuscar;
+					System.out.print("Introduce el Titulo del Libro que quiere buscar : ");
+					tituloBuscar = scan.nextLine();
+					
+					Libro.buscarLibroPorTitulo(tituloBuscar);
 				}else if(opcion1 == 2){
+					
 					String 	autorBuscar;
-					System.out.print("Que Autor quiere introducir para buscar un Libro :");
+					System.out.print("Que Autor quiere introducir para buscar un Libro : ");
 					autorBuscar = scan.nextLine();
 					
 					Libro.buscarLibroPorAutor ( autorBuscar);
 				}else if(opcion1 == 3){
 					
 					String tematicaBuscar;
-					System.out.print("Que temática desea introducir para encontrar un Libro :");
+					System.out.print("Que temática desea introducir para encontrar un Libro : ");
 					tematicaBuscar = scan.nextLine();
 					
 					Libro.buscarLibroPorTemática( tematicaBuscar);
@@ -78,11 +81,12 @@ int opcion3 = 0 ;
 					System.out.println("Opcion 4: Volver Atras");
 					
 					opcion2 = scan.nextInt();
+					scan.nextLine();
 					
 				if(opcion2 == 1){
+					
 					String tituloBuscar;
-						
-					System.out.print("Introduce el Titulo de la Revista que quiere buscar :");
+					System.out.print("Introduce el Titulo de la Revista que quiere buscar : ");
 					tituloBuscar = scan.nextLine();
 						
 					Revista.buscarRevistaPorTitulo( tituloBuscar );
@@ -90,7 +94,7 @@ int opcion3 = 0 ;
 				}else if(opcion2 == 2){
 					String autorBuscar;
 					
-					System.out.print("Que Autor quiere introducir para buscar una Revista :");
+					System.out.print("Que Autor quiere introducir para buscar una Revista : ");
 					autorBuscar = scan.nextLine();
 					
 					Revista.buscarRevistaPorAutor( autorBuscar);
@@ -98,7 +102,7 @@ int opcion3 = 0 ;
 				}else if(opcion2 == 3){
 					String tematicaBuscar;
 					
-					System.out.print("Que temática desea introducir para encontrar una Revista :");
+					System.out.print("Que temática desea introducir para encontrar una Revista : ");
 					tematicaBuscar = scan.nextLine();
 					
 					Revista.buscarRevistaPorTematica( tematicaBuscar);
@@ -123,16 +127,18 @@ int opcion3 = 0 ;
 					System.out.println("Opcion 4: Volver Atras");
 					
 					opcion3 = scan.nextInt();
+					scan.nextLine();
 					
-					if(opcion3 == 1){
-						String tituloBuscar;
-						System.out.print("Introduce el Titulo del Articulo que quiere buscar :");
-						tituloBuscar = scan.nextLine();
+				if(opcion3 == 1){
+					String tituloBuscar;
+					System.out.print("Introduce el Titulo del Articulo que quiere buscar :");
+					tituloBuscar = scan.nextLine();
 						
-						Articulo.buscarArticuloPorTitulo( tituloBuscar);
+					Articulo.buscarArticuloPorTitulo( tituloBuscar);
 						
 				}else if(opcion3 == 2){
 					String autorBuscar;
+					
 					System.out.print("Que Autor quiere introducir para buscar un Articulo :");
 					autorBuscar = scan.nextLine();
 					
