@@ -44,7 +44,7 @@ public class Revista extends materialL {
         for(Revista revista : arrayRevistas){
         	if(revista.getTitulo().equals(titulo)){
         		arrayRevistas.remove(revista);
-        		System.out.println("La Revista "+titulo+", ha sido eliminado.");
+        		System.out.println("La Revista : "+titulo+", ha sido eliminado.");
         		return;
         	}       	
         }
@@ -62,11 +62,11 @@ public class Revista extends materialL {
                 revista.setTematica(nuevaTematica);
                 revista.setPrecio(nuevoPrecio);
                 
-                System.out.println("La Revista: "+ titulo +", ha sido modificada exitosamente");
+                System.out.println("La Revista : "+ titulo +", ha sido modificada exitosamente");
                 return;
             }
         }
-        System.out.println("La Revista: "+ titulo +", no ha sido encontrada en la biblioteca");
+        System.out.println("La Revista : "+ titulo +", no ha sido encontrada en la biblioteca");
     }
     
     // METODOS PARA BUSCAR REVISTA POR: TITULO, AUTOR, TEMATICA
@@ -77,32 +77,49 @@ public class Revista extends materialL {
                 return;
             }
         }
-        System.out.println("La Revista "+ tituloBuscar +", No ha sido encontrada en la Biblioteca.");
+        System.out.println("La Revista : "+ tituloBuscar +", No ha sido encontrada en la Biblioteca.");
     }
     
     public static void buscarRevistaPorAutor(String autorBuscar) {
-        for (Revista revista : arrayRevistas) {
+        
+    	boolean encontrar = false;
+    	
+    	for (Revista revista : arrayRevistas) {
             if (revista.getAutor().equals(autorBuscar)){
                 revista.mostrar();
-                return;
+                System.out.println();
+                encontrar = true;
             }
         }
+    	if(!encontrar){
         System.out.println("Las Revistas del Autor : "+ autorBuscar +", No han sido encontradas en la Biblioteca.");
+    	}
     }
     
     public static void buscarRevistaPorTematica(String tematicaBuscar) {
+    	
+    	boolean encontrar = false;
+    	
         for (Revista revista : arrayRevistas) {
             if (revista.getTematica().equals(tematicaBuscar)){
                 revista.mostrar();
-                return;
+                System.out.println();
+                encontrar = true;
             }
         }
+        if(!encontrar){
         System.out.println("Las Revistas de la Temática : "+ tematicaBuscar +", No han sido encontradas en la Biblioteca.");
+        }
     }
     
     // METODO SIMPLE PARA MOSTRAR VALORES DE LA REVISTA
     public void mostrar() {
-        System.out.println("Revista {Titulo: "+ getTitulo() +" | Autor : "+ getAutor() +" | Temática : "+ getTematica() +" | Precio :"+ getPrecio() +" }");
+        System.out.println("Información del libro:");
+        System.out.println("Título: " + getTitulo());
+        System.out.println("Autor: " + getAutor());
+        System.out.println("Tematica: " + getTematica());
+        System.out.println("Precio: " + getPrecio());
+        
     }
     
     @Override

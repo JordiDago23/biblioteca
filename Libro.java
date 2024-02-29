@@ -43,11 +43,11 @@ public class Libro extends materialL{
         for(Libro libro : arrayLibros){
         	if(libro.getTitulo().equals(titulo)){
         		arrayLibros.remove(libro);
-        		System.out.println("El Libro "+titulo+", ha sido eliminado.");
+        		System.out.println("El Libro : "+titulo+", ha sido eliminado.");
         		return;
         	}       	
         }
-    	System.out.println("El Libro con el Titulo :"+titulo+", ha sido encontrada en la biblioteca.");
+    	System.out.println("El Libro con el Titulo : "+titulo+", ha sido encontrada en la biblioteca.");
     	
     }
     // MODIFICAR UNA LIBROS
@@ -59,11 +59,11 @@ public class Libro extends materialL{
                 libro.setAutor(nuevoAutor);
                 libro.setTematica(nuevaTematica);
                 libro.setReservado(nuevoReservado);
-                System.out.println("El libro " + titulo + " ha sido modificado exitosamente.");
+                System.out.println("El Libro : " + titulo + ", ha sido modificado exitosamente.");
                 return;
             }
         }
-        System.out.println("El libro " + titulo + " no ha sido encontrado en la biblioteca.");
+        System.out.println("El Libro : " + titulo + ", no ha sido encontrado en la biblioteca.");
     }
 
     // BUSCAR LIBROS POR (TITULO/AUTOR/TEMATICA)
@@ -74,28 +74,40 @@ public class Libro extends materialL{
                 return;
             }
         }
-        System.out.println("El libro " + tituloBuscar + " no ha sido encontrado en la biblioteca.");
+        System.out.println("El Libro : " + tituloBuscar + ", no ha sido encontrado en la biblioteca.");
     }
 
     public static void buscarLibroPorAutor (String autorBuscar) {
-        for (Libro libro : arrayLibros) {
+        
+    	boolean encontrar = false;
+    	
+    	for (Libro libro : arrayLibros) {
             if (libro.getAutor().equalsIgnoreCase(autorBuscar)) {
             	mostrarLibro(libro);
-                return;
+               System.out.println();
+               encontrar = true;
             }
         }
-        System.out.println("El libro " + autorBuscar + " no ha sido encontrado en la biblioteca.");
+    	if(!encontrar){
+        System.out.println("El Libro : " + autorBuscar + ", no ha sido encontrado en la biblioteca.");
+    	}
     }
     
     
     public static void buscarLibroPorTemática(String tematicaBuscar) {
+    	
+    	boolean encontrar = false;
+    	
         for (Libro libro : arrayLibros) {
             if (libro.getTematica().equalsIgnoreCase(tematicaBuscar)) {
             	mostrarLibro(libro);
-                return;
+            	System.out.println();
+            	encontrar = true;
             }
         }
-        System.out.println("El libro " + tematicaBuscar + " no ha sido encontrado en la biblioteca.");
+        if(!encontrar){
+        System.out.println("El Libro : " + tematicaBuscar + ", no ha sido encontrado en la biblioteca.");
+        }
     }
     
     public static void eliminarReserva(String titulo) {
@@ -103,14 +115,14 @@ public class Libro extends materialL{
             if (libro.getTitulo().equals(titulo)) {
                 if (libro.getReservado()) {
                     libro.setReservado(false);
-                    System.out.println("La reserva del Libro :"+titulo+", ha sido anulada.");
+                    System.out.println("La reserva del Libro : "+titulo+", ha sido anulada.");
                 } else {
-                    System.out.println("El Libro :"+titulo+", no ha sido reservado.");
+                    System.out.println("El Libro : "+titulo+", no ha sido reservado.");
                 }
                 return;
             }
         }
-        System.out.println("El Libro :"+titulo+", no se encuentra en la biblioteca.");
+        System.out.println("El Libro : "+titulo+", no se encuentra en la biblioteca.");
     }
 
     public static void reservarLibro(String titulo) {
@@ -118,14 +130,14 @@ public class Libro extends materialL{
             if (libro.getTitulo().equals(titulo)) {
                 if (!libro.getReservado()) {
                     libro.setReservado(true);
-                    System.out.println("El Libro :"+titulo+", ha sido reservado por usted.");
+                    System.out.println("El Libro : "+titulo+", ha sido reservado por usted.");
                 } else {
-                    System.out.println("El Libro :"+titulo+", ya ha sido reservado por un cliente.");
+                    System.out.println("El Libro : "+titulo+", ya ha sido reservado por un cliente.");
                 }
                 return;
             }
         }
-        System.out.println("El Libro :"+titulo+", no se encuentra en la biblioteca.");
+        System.out.println("El Libro : "+titulo+", no se encuentra en la biblioteca.");
     }
 
 

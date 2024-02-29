@@ -28,9 +28,9 @@ public class Articulo extends materialL {
     
     public static void verificarDisponibilidad(Articulo articulo) {
         if (articulo.isDisponible()) {
-            System.out.println("El artículo "+articulo.getTitulo()+" está disponible.");
+            System.out.println("El Artículo : "+articulo.getTitulo()+", está disponible.");
         } else {
-            System.out.println("El artículo "+articulo.getTitulo()+" no está disponible. Contactar al autor: " + articulo.getAutor());
+            System.out.println("El Artículo : "+articulo.getTitulo()+", no está disponible. Contactar al autor: " + articulo.getAutor());
         }
     }
     
@@ -45,11 +45,11 @@ public class Articulo extends materialL {
         for(Articulo articulo : arrayArticulos){
         	if(articulo.getTitulo().equals(titulo)){
         		arrayArticulos.remove(articulo);
-        		System.out.println("El Articulo "+titulo+", ha sido eliminado.");
+        		System.out.println("El Articulo : "+titulo+", ha sido eliminado.");
         		return;
         	}       	
         }
-    	System.out.println("El Articulo con el Titulo :"+titulo+", ha sido encontrada en la biblioteca.");
+    	System.out.println("El Articulo con el Titulo : "+titulo+",No ha sido encontrada en la biblioteca.");
     	
     }
     
@@ -62,11 +62,11 @@ public class Articulo extends materialL {
                 articulo.setAutor(nuevoAutor);
                 articulo.setTematica(nuevoTematica);
                 articulo.setDisponible(nuevoDisponible);
-                System.out.println("El artículo " + titulo + " ha sido modificado exitosamente.");
+                System.out.println("El Artículo : " + titulo + ", ha sido modificado exitosamente.");
                 return;
             }
         }
-        System.out.println("El artículo "+ titulo +" no ha sido encontrado en la biblioteca.");
+        System.out.println("El Artículo : "+ titulo +" no ha sido encontrado en la biblioteca.");
     }
     
     // MÉTODOS PARA BUSCAR ARTICULOS POR: TITULO, AUTOR, TEMATICA
@@ -77,32 +77,48 @@ public class Articulo extends materialL {
                 return;
             }
         }
-        System.out.println("El artículo "+ tituloBuscar +" no ha sido encontrado en la biblioteca.");
+        System.out.println("El Artículo : "+ tituloBuscar +", no ha sido encontrado en la biblioteca.");
     }
     
     public static void buscarArticuloPorAutor(String autorBuscar) {
-        for (Articulo articulo : arrayArticulos) {
+        
+    	boolean encontrar = false;
+    	
+    	for (Articulo articulo : arrayArticulos) {
             if (articulo.getAutor().equals(autorBuscar)) {
                 articulo.mostrar();
-                return;
+                System.out.println();
+                encontrar = true;
             }
         }
-        System.out.println("Los artículos del autor " + autorBuscar + " no han sido encontrados en la biblioteca.");
+    	if(!encontrar){
+        System.out.println("Los Artículos del Autor : " + autorBuscar + ", no han sido encontrados en la biblioteca.");
+    	}
     }
     
     public static void buscarArticuloPorTematica(String tematicaBuscar) {
-        for (Articulo articulo : arrayArticulos) {
+        
+    	boolean encontrar = false;
+    	
+    	for (Articulo articulo : arrayArticulos) {
             if (articulo.getTematica().equals(tematicaBuscar)) {
                 articulo.mostrar();
-                return;
+                System.out.println();
+                encontrar = true;
             }
         }
-        System.out.println("Los artículos de la temática " + tematicaBuscar + " no han sido encontrados en la biblioteca.");
+    	if(!encontrar){
+        System.out.println("Los Artículos de la Temática : " + tematicaBuscar + ", no han sido encontrados en la biblioteca.");
+    	}
     }
     
     // MÉTODO SIMPLE PARA MOSTRAR VALORES DEL ARTICULO
-    public void mostrar() {
-        System.out.println("Artículo {Título: " + getTitulo() + " | Autor: " + getAutor() + " | Temática: " + getTematica() + " | Disponible: " + (disponible ? "Sí" : "No") + "}");
+    public void mostrar() {        
+        System.out.println("Información del libro:");
+        System.out.println("Título: " + getTitulo());
+        System.out.println("Autor: " + getAutor());
+        System.out.println("Tematica: " + getTematica());
+        System.out.println("Disponible: " + (disponible ? "Sí" : "No"));
     }
 }
 
